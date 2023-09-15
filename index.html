@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Form</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230915152625">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css?_v=20230915152625" />
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<div class="card">
+			<div id="loader"></div>
+			<div class="card__content">
+				<div class="card__column card__column_left">
+					<div class="card__header">
+						<h1 class="card__title">Get in <span>touch</span> </h1>
+						<div class="card__text">
+							<p>Enim tempor eget pharetra facilisis sed maecenas adipiscing. Eu leo molestie vel, ornare non id blandit netus.</p>
+						</div>
+					</div>
+					<form class="card__form form" data-popup-message="#popup-done" enctype=multipart/form-data action="#" data-dev method="POST">
+						<label for="name" class="form__label">
+							<input data-required class="form__input input" id="name" autocomplete="off" type="text" name="userName" placeholder="Jeka Koba">
+							<span class="form__placeholder">Contact name</span>
+						</label>
+						<label for="street" class="form__label">
+							<input data-required class="form__input input" id="street" autocomplete="off" type="text" name="street" placeholder="Street.51">
+							<span class="form__placeholder">Street</span>
+						</label>
+						<div class="form__row">
+							<label for="city" class="form__label">
+								<input data-required class="form__input input" id="city" autocomplete="off" type="text" name="city" placeholder="New York">
+								<span class="form__placeholder">City</span>
+							</label>
+							<label for="poscode" class="form__label">
+								<input data-required class="form__input input" id="poscode" autocomplete="off" type="tel" name="poscode" placeholder="2465379">
+								<span class="form__placeholder">Poscode</span>
+							</label>
+						</div>
+						<label for="email" class="form__label">
+							<input data-required class="form__input input" id="email" autocomplete="off" type="email" name="email" placeholder="example@mail.com">
+							<span class="form__placeholder">Email</span>
+						</label>
+						<label for="phone" class="form__label form__label_margin-bottom">
+							<input data-required class="form__input input" id="phone" autocomplete="off" type="text" name="phone">
+							<span class="form__placeholder">Contact phone</span>
+						</label>
+						<label for="message" class="form__label">
+							<textarea data-required data-autoheight class="form__input input" placeholder="Enter your message" id="message" autocomplete="off" name="message"></textarea>
+							<span class="form__placeholder form__placeholder_area">Let’s talk about your idea</span>
+						</label>
+						<div class="form__label-file-box">
+							<label class="form__label-file" for="upload">
+								<input data-required class="form__input-file" name="file[]" accept=".doc,.docx,.pdf" id="upload" type="file">
+								<span class="form__text-file">
+									Upload Additional file
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15" stroke="#737B7D" stroke-linecap="round" stroke-linejoin="round" />
+										<path d="M17 8L12 3L7 8" stroke="#737B7D" stroke-linecap="round" stroke-linejoin="round" />
+										<path d="M12 3V15" stroke="#737B7D" stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+								</span>
+							</label>
+							<p class="form__file-description">Attach file. File size of your documents should not exceed <strong>10MB</strong> <strong>(.doc,.docx,.pdf)</strong></p>
+						</div>
+						<div class="uploaded-area"></div>
+						<div class="form__checkbox checkbox">
+							<input data-required id="c_1" class="checkbox__input" type="checkbox" value="ok" name="NDA">
+							<label for="c_1" class="checkbox__label"><span class="checkbox__text">I want to protect my data by signing an NDA</span></label>
+						</div>
+						<button class="form__button" type="submit">Submit</button>
+					</form>
+					<ul class="card__list-info info-list">
+						<li class="info-list__item">
+							<div class="info-list__icon">
+								<img src="img/phone.svg" alt="phone icon">
+							</div>
+							<div class="info-list__body">
+								<h5 class="info-list__title">Phone</h5>
+								<a href="tel:111111" class="info-list__link">11-11-11-11</a>
+							</div>
+						</li>
+						<li class="info-list__item">
+							<div class="info-list__icon">
+								<img src="img/email.svg" alt="email icon">
+							</div>
+							<div class="info-list__body">
+								<h5 class="info-list__title">E-MAIL</h5>
+								<a href="mailto:info@company.com" class="info-list__link">info@company.com</a>
+							</div>
+						</li>
+						<li class="info-list__item">
+							<div class="info-list__icon">
+								<img src="img/email.svg" alt="email icon">
+							</div>
+							<div class="info-list__body">
+								<h5 class="info-list__title">HELPDESK</h5>
+								<a href="#" class="info-list__link">https://helpdesk.com</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="card__column card__column_right">
+					<div class="loading-gif"></div>
+					<div id="map" class="card__map"></div>
+				</div>
+			</div>
+		</div>
+		<div id="popup-done" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<div class="popup__icon">
+						<img src="img/check-popup.svg" alt="check icon">
+					</div>
+					<div class="popup__title">Thank You</div>
+					<div class="popup__text">
+						<p>One of our team members is going to reach back to you within 24 hours!"
+						</p>
+					</div>
+					<button data-close type="button" aria-label="close popup" class="popup__close">Close</button>
+				</div>
+			</div>
+		</div>
+		<script src="js/app.min.js?_v=20230915152625"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_I6VdLbVMy9r3wd0Zv8Cz0pNNf5GLFVs&callback=initMap&libraries=places&v=weekly&language=en&_v=20230915152625" defer></script>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Feedback</title>
+	<style>
+		ul li {
+			margin-bottom: 10px;
+		}
+
+		.container {
+			padding: 20px;
+		}
+
+		* {
+			color: #ffffff !important;
+		}
+	</style>
+</head>
+
+<body style="background-color: #30333a; color: #fff; font-family: Arial, sans-serif;">
+	<div class="container">
+		<h1>Feedback</h1>
+		<p>We have received your message:</p>
+		<ul>
+			<li>Contact name: {{sender_name}}</li>
+			<li>Street: {{sender_street}}</li>
+			<li>City: {{sender_city}}</li>
+			<li>Poscode: {{sender_poscode}}</li>
+			<li>Email: {{sender_email}}</li>
+			<li>Contact phone: {{sender_phone}}</li>
+			<li>
+				<p>Message:</p>
+				<p>{{message}}</p>
+			</li>
+		</ul>
+		<p>We will read your message and get back to you as soon as possible.</p>
+		<p>Best regards,<br>The Support Team</p>
+		<hr>
+	</div>
+</body>
+
+</html>
